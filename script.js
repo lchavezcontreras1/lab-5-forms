@@ -16,7 +16,7 @@ function displayQuantity(e){
     let q2 = parseFloat($("input#quantity2").val())*14.99;
     $("td#total-quantity2").text("$"+q2.toFixed(2));
     let total = q1+q2;
-    $("#td#grandtotal").text("$"+total.toFixed(2));
+    $("td#grandtotal").text("$"+total.toFixed(2));
 
 }
 function displayQuantity2(e){
