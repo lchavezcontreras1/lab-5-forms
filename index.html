@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 5 Forms</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+<main>
+    <!--class notes
+    data attributes
+    will parse for you but no 2.00 (extra decimals)
+    -->
+    <!--
+    three fields:
+        ranks: Sergeant,Captain, Major, Colonel
+        first name
+        last name
+    -->
+    <form id="salute">
+        <fieldset>
+            <legend>Salute</legend>
+            <div id="ranks">
+                <p><label>Choose a rank:</label></p>
+
+                <p><input type="radio" id="sergeant" name="rank" value="Sergeant" data-color="#C23C3D">
+                    <label for="sergeant">Sergeant</label></p>
+
+                <p><input type="radio" id="captain" name="rank" value="Captain" data-color="#5FA32F">
+                    <label for="captain">Captain</label></p>
+
+                <p><input type="radio" id="major" name="rank" value="Major" data-color="#7CCBDA">
+                    <label for="major">Major</label></p>
+
+                <p><input type="radio" id="colonel" name="rank" value="Colonel" data-color="#1E91A8">
+                    <label for="colonel">Colonel</label></p>
+            </div> <!--closes ranks-->
+
+            <div>
+                <p><label for="firstname">First Name:<span class="required">*</span></label></p>
+                <p><input type="text" id="firstname" name="firstname"></p>
+            </div>
+            <div>
+                <p><label for="lastname">Last Name:<span class="required">*</span></label></p>
+                <p><input type="text" id="lastname" name="lastname"></p>
+            </div>
+            <div><button id="form1">Submit</button></div>
+            <div><p id="form1-output"></p></div>
+        </fieldset>
+    </form>
+    <!--
+create table tr 4
+    Quantity: input[type=number]
+    Products: Learning jQuery, jQuery Donation
+    Price: $39.00, $14.99
+    Total: JavaScript
+    Grand Total: JavaScript
+-->
+    <form>
+        <fieldset>
+            <table>
+                <tr>
+                    <td><strong>Quantity</strong></td>
+                    <td><strong>Products</strong></td>
+                    <td><strong>Price</strong></td>
+                    <td><strong>Total</strong></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantity1" name="quantity1"></td>
+                    <td><label for="quantity1">Learning JQuery</label></td>
+                    <td>$39.00</td>
+                    <td id="total-quantity1"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="quantity2" name="quantity2"></td>
+                    <td><label for="quantity2">jQuery Donation</label></td>
+                    <td>$14.99</td>
+                    <td id="total-quantity2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><strong>Grand Total</strong></td>
+                    <td id="grandtotal"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</main>
+
+<!--JS-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
