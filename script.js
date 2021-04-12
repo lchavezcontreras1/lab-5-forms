@@ -6,19 +6,22 @@
 //get submitted form
 $(document).ready(function (){
     $("button#form1").click(greeting);
-    $("#quantity1").on("change", displayQuantity1);
-    $("#quantity2").on("change", displayQuantity2);
+    $("#quantity1").on("change", displayQuantity);
+    $("#quantity2").on("change", displayQuantity);
 });
-function displayQuantity1(e){
+function displayQuantity(e){
     e.preventDefault();
-    let total = parseFloat($("input#quantity1").val())*39;
-    $("td#total-quantity1").text("$"+total.toFixed(2));
+    let q1 = parseFloat($("input#quantity1").val())*39;
+    $("td#total-quantity1").text("$"+q1.toFixed(2));
+    let q2 = parseFloat($("input#quantity2").val())*14.99;
+    $("td#total-quantity2").text("$"+q2.toFixed(2));
+    let total = q1+q2;
+    $("#td#grandtotal").text("$"+total.toFixed(2));
 
 }
 function displayQuantity2(e){
     e.preventDefault();
-    let total = parseFloat($("input#quantity2").val())*14.99;
-    $("td#total-quantity2").text("$"+total.toFixed(2));
+
 }
 function greeting(e){
     e.preventDefault();
